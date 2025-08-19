@@ -30,18 +30,16 @@ header p {
 }
 
 /* Navigation */
-nav {
-    background-color: #333;
-}
-
+/* Navigation */
 nav ul {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     list-style: none;
     padding: 10px 0;
+    margin: 0;
 }
 
 nav ul li {
+    display: inline-block;
     margin: 0 15px;
 }
 
@@ -58,28 +56,18 @@ nav ul li a:hover {
 }
 
 /* Featured Products */
-.featured {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.featured h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
-}
-
 .products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-items: center;
+    text-align: center;
+    /* Center the inline-block products */
 }
 
 .product {
+    display: inline-block;
     background-color: white;
     padding: 20px;
-    width: 100%;
-    max-width: 300px;
+    width: 30%;
+    margin: 1.5%;
+    vertical-align: top;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -95,15 +83,7 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-.product h3 {
-    margin: 15px 0 10px;
-}
-
-.product p {
-    font-size: 0.95em;
-    color: #666;
-}
-
+/* Buttons */
 .btn {
     display: inline-block;
     background-color: #ff6f61;
@@ -117,41 +97,4 @@ nav ul li a:hover {
 
 .btn:hover {
     background-color: #e65b50;
-}
-
-/* About & Contact Sections */
-#about,
-#contact {
-    padding: 50px 20px;
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
-}
-
-#about h2,
-#contact h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-#contact p,
-#about p {
-    margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-footer a {
-    color: #ff6f61;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
