@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Assignment 1: A simple HTML landing page showcasing featured products with HTML tags, attributes, and basic CSS styling.">
+    <meta name="keywords" content="HTML, CSS, Assignment 1, Landing Page, Featured Products, Web Design">
+    <meta name="author" content="Chandi Charan Mahato">
+
+    <!-- Open Graph for Social Media Sharing -->
+    <meta property="og:title" content="Assignment 1 - Simple HTML & CSS Landing Page">
+    <meta property="og:description" content="A simple landing page showcasing featured products using HTML and CSS.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Assignment 1</h1>
+        <p>Create a simple HTML page with semantic HTML tags, attributes, and basic CSS styling.</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#home" title="Go to Home Section">Home</a></li>
+            <li><a href="#featured" title="View Featured Products">Products</a></li>
+            <li><a href="#about" title="Learn About Us">About Us</a></li>
+            <li><a href="#contact" title="Contact Us">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Featured Products Section -->
+    <main id="home">
+        <section id="featured" class="featured" aria-label="Featured Products">
+            <h2>Featured Products</h2>
+            <div class="products">
+                <article class="product">
+                    <img src="https://images.pexels.com/photos/983831/pexels-photo-983831.jpeg"
+                        alt="Wireless Headphones" loading="lazy">
+                    <h3>Wireless Headphones</h3>
+                    <p>High-quality wireless headphones with noise cancellation.</p>
+                    <a href="#" class="btn" title="Buy Wireless Headphones">Buy Now</a>
+                </article>
+                <article class="product">
+                    <img src="https://images.pexels.com/photos/393047/pexels-photo-393047.jpeg" alt="Smart Watch"
+                        loading="lazy">
+                    <h3>Smart Watch</h3>
+                    <p>Track your fitness and stay connected on the go.</p>
+                    <a href="#" class="btn" title="Buy Smart Watch">Buy Now</a>
+                </article>
+                <article class="product">
+                    <img src="https://images.pexels.com/photos/33453406/pexels-photo-33453406.jpeg"
+                        alt="Bluetooth Speaker" loading="lazy">
+                    <h3>Bluetooth Speaker</h3>
+                    <p>Portable speaker with amazing sound quality.</p>
+                    <a href="#" class="btn" title="Buy Bluetooth Speaker">Buy Now</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" aria-label="About Section">
+            <h2>About Us</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium veritatis debitis facilis
+                accusantium sunt assumenda officiis odit, natus id? Tempore eaque odio consectetur ut laborum
+                accusantium suscipit aspernatur laboriosam, possimus enim tenetur..</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" aria-label="Contact Section">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:abc@exmaple.com">abc@exmaple.com</a></p>
+            <p>Phone: +91 1234567890</p>
+            <p>Address: 123, Main Street, xyz city, India</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Author: Chandi Charan Mahato</p>
+        <p>Follow us on
+            <a href="#" title="Facebook Profile">Facebook</a>,
+            <a href="#" title="Instagram Profile">Instagram</a>,
+            <a href="#" title="Twitter Profile">Twitter</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
