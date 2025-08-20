@@ -9,19 +9,9 @@ It includes HTML, CSS, and practice exercises organized into folders.
 
 ### 📒 Assignments
 
-- [Assignment 1](Assignment/Assignment%201)
-
-  - [index.html](https://chandi977.github.io/GFG/Assignment/Assignment%201/index.html)
-  - [style.css](Assignment/Assignment%201/style.css)
-
-- [Assignment 2](Assignment/Assignment%202)
-
-  - [index.html](https://chandi977.github.io/GFG/Assignment/Assignment%202/index.html)
-  - [style.css](Assignment/Assignment%202/style.css)
-
-- [Assignment 3](Assignment/Assignment%203)
-  - [index.html](https://chandi977.github.io/GFG/Assignment/Assignment%203/index.html)
-  - [style.css](Assignment/Assignment%203/style.css)
+- [Assignment 1](https://chandi977.github.io/GFG/Assignment/Assignment%201/)
+- [Assignment 2](https://chandi977.github.io/GFG/Assignment/Assignment%202/)
+- [Assignment 3](https://chandi977.github.io/GFG/Assignment/Assignment%203/)
 
 ---
 
@@ -29,39 +19,20 @@ It includes HTML, CSS, and practice exercises organized into folders.
 
 #### 🔹 Advanced CSS
 
-- [Work 1](Class%20Work/Advanced%20CSS/work%201)
-
-  - [index.html](https://chandi977.github.io/GFG/Class%20Work/Advanced%20CSS/work%201/index.html)
-  - [style.css](Class%20Work/Advanced%20CSS/work%201/style.css)
-  - [readme.md](Class%20Work/Advanced%20CSS/work%201/readme.md)
-
-- [Work 2](Class%20Work/Advanced%20CSS/work%202)
-  - [index.html](https://chandi977.github.io/GFG/Class%20Work/Advanced%20CSS/work%202/index.html)
-  - [style.css](Class%20Work/Advanced%20CSS/work%202/style.css)
-  - [readme.md](Class%20Work/Advanced%20CSS/work%202/readme.md)
+- [Work 1](https://chandi977.github.io/GFG/Class%20Work/Advanced%20CSS/work%201/)
+- [Work 2](https://chandi977.github.io/GFG/Class%20Work/Advanced%20CSS/work%202/)
 
 #### 🔹 Grid
 
-- [Work 1](Class%20Work/Grid/work1)
-
-  - [index.html](https://chandi977.github.io/GFG/Class%20Work/Grid/work1/index.html)
-  - [style.css](Class%20Work/Grid/work1/style.css)
-
-- [Work 2](Class%20Work/Grid/work2)
-  - [index.html](https://chandi977.github.io/GFG/Class%20Work/Grid/work2/index.html)
-  - [style.css](Class%20Work/Grid/work2/style.css)
+- [Work 1](https://chandi977.github.io/GFG/Class%20Work/Grid/work1/)
+- [Work 2](https://chandi977.github.io/GFG/Class%20Work/Grid/work2/)
 
 ---
 
 ### 📝 Home Work
 
-- [Day 1](HomeWork/Day%201)
-
-  - [index.html](https://chandi977.github.io/GFG/HomeWork/Day%201/index.html)
-  - [style.css](HomeWork/Day%201/style.css)
-
-- [Day 2](HomeWork/Day%202)  
-  _(No files yet)_
+- [Day 1](https://chandi977.github.io/GFG/HomeWork/Day%201/)
+- [Day 2](https://chandi977.github.io/GFG/HomeWork/Day%202/)
 
 ---
 
