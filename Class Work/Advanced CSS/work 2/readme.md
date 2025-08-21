@@ -4,6 +4,10 @@ A **media query** in CSS allows you to apply styles **based on device characteri
 
 It’s the backbone of **responsive design** (making a website look good on mobile, tablet, and desktop).
 
+1. 976 - 978 - Tab Screen
+2. 576 - 578 - Mobile Screen
+3. 1024 - more - Desktop Screen
+
 ---
 
 ## 🔹 **Basic Syntax**
