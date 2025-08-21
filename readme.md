@@ -211,7 +211,7 @@ This is a personal learning repository, but feedback and suggestions are always 
 
 <div align="center">
 
-**Chandi Prasad**
+**Chandi Charan Mahato**
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Chandi977)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/chandiprasad)
