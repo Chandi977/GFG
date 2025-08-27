@@ -25,29 +25,33 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Destination</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#mainDiv">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#destinations">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#testimoonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#booknow">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="mainDiv text-white">
+    <section class="mainDiv text-white" id="mainDiv">
         <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+            <video class="video" src="video.mp4" autoplay loop muted></video>
             <h2 data-aos="fade-down">Discover Your Next Adventure</h2>
             <p data-aos="fade-down">Explore the world with our curated travel packages.</p>
-            <button class="btn-custom btn-lg" data-aos="zoom-in">Explore Destinations</button>
+            <div class="d-flex frel-row justify-content-center align-items-center text-center gap-2">
+                <button class="btn-custom btn-lg" data-aos="zoom-in">Book Now</button>
+                <button class="btn-custom btn-lg" data-aos="zoom-in">Explore More</button>
+            </div>
         </div>
     </section>
 
-    <section class="bg-white">
+    <section class="bg-white" id="destinations">
         <div class="container">
             <div class="row">
                 <h2 class="fw fw-bold" data-aos="fade-up">Featured Destinations</h2>
                 <!-- Product Card 1 -->
-                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
                     <div class="card h-100 shadow-sm">
                         <img src="https://images.pexels.com/photos/1530259/pexels-photo-1530259.jpeg"
                             class="card-img-top" alt="Paris">
@@ -60,7 +64,7 @@
                 </div>
 
                 <!-- Product Card 2 -->
-                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
                     <div class="card h-100 shadow-sm">
                         <img src="https://images.pexels.com/photos/1544351/pexels-photo-1544351.jpeg"
                             class="card-img-top" alt="Bali">
@@ -72,9 +76,20 @@
                 </div>
 
                 <!-- Product Card 3 -->
-                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
                     <div class="card h-100 shadow-sm">
                         <img src="https://images.pexels.com/photos/2224861/pexels-photo-2224861.png"
+                            class="card-img-top" alt="New York">
+                        <div class="card-body">
+                            <h5 class="card-title">New York</h5>
+                            <p class="card-text text-muted">Discover the city that never sleeps and its iconic skyline.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/2349168/pexels-photo-2349168.jpeg"
                             class="card-img-top" alt="New York">
                         <div class="card-body">
                             <h5 class="card-title">New York</h5>
@@ -87,7 +102,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-white">
+    <section class="bg-white" id="testimoonials">
         <div class="container">
             <div class="row text-center">
                 <h2 class="fw fw-bold mt-4 pt-2" data-aos="fade-up">What Our Customers Say</h2>
@@ -129,6 +144,64 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+    <section class="bg-white" id="booknow">
+        <div class="container col-md-12">
+            <div class="row">
+                <h2 class="text-center">Contact Us</h2>
+                <div class="col-md-6 col-md-2 contact-us">
+                    <form class="text-white p-4 rounded" action="#" method="post">
+                        <label for="nameGroup" class="form-label">Name</label>
+                        <div class="input-group mb-3" id="nameGroup">
+                            <!-- <label for="floatingInput">First Name</label> -->
+                            <input type="text" id="inputFirstName" class="form-control m-2" placeholder="First Name"
+                                required>
+                            <input type="text" id="inputLastName" class="form-control m-2" placeholder="Last Name"
+                                required>
+                        </div>
+
+                        <div class="input-group mb-3" id="nameGroup">
+                            <input type="text" id="inputEmail" class="form-control m-2" placeholder="Email">
+                            <input type="text" class="form-control m-2" placeholder="Phone Number">
+                        </div>
+
+                        <button type="button" onclick="modalCheck()" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Send Mail
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="firstName"></p>
+                                        <p id="lastName"></p>
+                                        <p id="email"></p>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 col-md-2">
+                    <img src="https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg" alt="contact"
+                        height="400px">
+                </div>
             </div>
         </div>
     </section>
