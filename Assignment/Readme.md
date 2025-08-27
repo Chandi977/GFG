@@ -153,9 +153,9 @@ GFG/
 
 ### 🚀 Projects
 
-| Project       | Description                | Technologies                     | Status         | Live Demo                                                    | Source Code                                                   |
-| ------------- | -------------------------- | -------------------------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------- |
-| **Project 1** | Full-Stack Web Application | HTML5, CSS3, JavaScript, Node.js | 🚧 In Progress | [Demo](https://chandi977.github.io/GFG/Project/Project%201/) | [📄 Code](https://github.com/Chandi977/GFG/tree/main/Project) |
+| Project       | Description                | Technologies            | Status    | Live Demo                                                    | Source Code                                                               |
+| ------------- | -------------------------- | ----------------------- | --------- | ------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| **Project 1** | Full-Stack Web Application | HTML5, CSS3, JavaScript | Completed | [Demo](https://chandi977.github.io/GFG/Project/Project%201/) | [📄 Code](https://github.com/Chandi977/GFG/tree/main/Project/Project%201) |
 
 ## 💻 Technologies Used
 
