@@ -682,6 +682,8 @@ console.log(y); // ReferenceError
 const y = 15;
 ```
 
+---
+
 ## 🔹 3. Function Hoisting
 
 Function Declarations are hoisted completely (you can call them before definition).
