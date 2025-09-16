@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Laptop",
+    "price": 55000,
+    "category": "Electronics",
+    "image": "https://images.pexels.com/photos/18105/pexels-photo.jpg"
+  },
+  {
+    "name": "Smartphone",
+    "price": 20000,
+    "category": "Electronics",
+    "image": "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg"
+  },
+  {
+    "name": "Jeans",
+    "price": 1500,
+    "category": "Clothing",
+    "image": "https://images.pexels.com/photos/603022/pexels-photo-603022.jpeg"
+  },
+  {
+    "name": "T-Shirt",
+    "price": 500,
+    "category": "Clothing",
+    "image": "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg"
+  },
+  {
+    "name": "Coffee Mug",
+    "price": 300,
+    "category": "Kitchen",
+    "image": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg"
+  },
+  {
+    "name": "Headphones",
+    "price": 1500,
+    "category": "Electronics",
+    "image": "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg"
+  },
+  {
+    "name": "Sneakers",
+    "price": 2500,
+    "category": "Footwear",
+    "image": "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg"
+  }
+]
