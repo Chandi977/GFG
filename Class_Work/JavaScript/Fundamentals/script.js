@@ -114,8 +114,8 @@
 // delete person.lastName;
 // console.log(person);
 
-// // ES6 Features
-// console.log("ES6");
+// // // ES6 Features
+// // console.log("ES6");
 
 // const multiply = (a, b) => a * b;
 // console.log(multiply(5, 3));
@@ -254,111 +254,192 @@
 
 // Create a  process Sandwich maker  using callback function and set timeout function
 
-let text = document.getElementById("myElement");
+// let text = document.getElementById("myElement");
 
-function makeSandwich(breadType, cb) {
-  setTimeout(() => {
-    text.innerText = `Starting to make a sandwich with ${breadType} bread.`;
-    console.log(`Starting to make a sandwich with ${breadType} bread.`);
-  }, 1000);
-  cb();
-}
+// function makeSandwich(breadType, cb) {
+//   setTimeout(() => {
+//     text.innerText = `Starting to make a sandwich with ${breadType} bread.`;
+//     console.log(`Starting to make a sandwich with ${breadType} bread.`);
+//   }, 1000);
+//   cb();
+// }
 
-function fryBread(cb) {
-  setTimeout(() => {
-    text.innerText = "Bread is being fried...";
-    console.log("Bread is being fried...");
-  }, 3000);
-  cb();
-}
+// function fryBread(cb) {
+//   setTimeout(() => {
+//     text.innerText = "Bread is being fried...";
+//     console.log("Bread is being fried...");
+//   }, 3000);
+//   cb();
+// }
 
-function addFillings(cb) {
-  setTimeout(() => {
-    text.innerText = "Adding fillings to the sandwich...";
-    console.log("Adding fillings to the sandwich...");
-  }, 6000);
-  cb();
-}
+// function addFillings(cb) {
+//   setTimeout(() => {
+//     text.innerText = "Adding fillings to the sandwich...";
+//     console.log("Adding fillings to the sandwich...");
+//   }, 6000);
+//   cb();
+// }
 
-function serveSandwich() {
-  makeSandwich("White Bread", () => {
-    fryBread(() => {
-      addFillings(() => {
-        setTimeout(() => {
-          text.innerText = "Sandwich is ready to be served!";
-          console.log("Sandwich is ready to be served!");
-        }, 8000);
-      });
-    });
-  });
-}
+// function serveSandwich() {
+//   makeSandwich("White Bread", () => {
+//     fryBread(() => {
+//       addFillings(() => {
+//         setTimeout(() => {
+//           text.innerText = "Sandwich is ready to be served!";
+//           console.log("Sandwich is ready to be served!");
+//         }, 8000);
+//       });
+//     });
+//   });
+// }
 
-let greenButton = document.getElementById("green");
-let redButton = document.getElementById("red");
+// let greenButton = document.getElementById("green");
+// let redButton = document.getElementById("red");
 
-function changeToGreen(color, cb) {
-  return function () {
-    document.body.style.backgroundColor = color;
-  };
-}
+// function changeToGreen(color, cb) {
+//   return function () {
+//     document.body.style.backgroundColor = color;
+//   };
+// }
 
-document.getElementById("green").onclick = changeToGreen("green");
-document.getElementById("red").onclick = changeToGreen("red");
+// document.getElementById("green").onclick = changeToGreen("green");
+// document.getElementById("red").onclick = changeToGreen("red");
 
-// HOF Higher order function
-// Example 1 using HOF Real world example
-function applyDiscount(price, discountFn) {
-  return discountFn(price);
-}
-function tenPercentDiscount(price) {
-  return price * 0.9;
-}
-function twentyPercentDiscount(price) {
-  return price * 0.8;
-}
+// // HOF Higher order function
+// // Example 1 using HOF Real world example
+// function applyDiscount(price, discountFn) {
+//   return discountFn(price);
+// }
+// function tenPercentDiscount(price) {
+//   return price * 0.9;
+// }
+// function twentyPercentDiscount(price) {
+//   return price * 0.8;
+// }
 
-let originalPrice = 100;
-let newPrice1 = applyDiscount(originalPrice, tenPercentDiscount);
-let newPrice2 = applyDiscount(originalPrice, twentyPercentDiscount);
-console.log(newPrice1); // 90
-console.log(newPrice2); // 80
+// let originalPrice = 100;
+// let newPrice1 = applyDiscount(originalPrice, tenPercentDiscount);
+// let newPrice2 = applyDiscount(originalPrice, twentyPercentDiscount);
+// console.log(newPrice1); // 90
+// console.log(newPrice2); // 80
 
-// Example 2  using HOF
-let arr = [2, 4, 5, 67, 8, 9];
-arr.map((Element) => {
-  console.log(Element * 2);
-});
+// // Example 2  using HOF
+// let arr = [2, 4, 5, 67, 8, 9];
+// arr.map((Element) => {
+//   console.log(Element * 2);
+// });
 
-// Example 3 using HOF
-let salary = [20000, 30000, 40000, 50000];
+// // Example 3 using HOF
+// let salary = [20000, 30000, 40000, 50000];
 
-function calculateTenPercent(num) {
-  return num * 0.1;
-}
-function calculateTwentyPercent(num) {
-  return num * 0.2;
-}
+// function calculateTenPercent(num) {
+//   return num * 0.1;
+// }
+// function calculateTwentyPercent(num) {
+//   return num * 0.2;
+// }
 
-Array.prototype.calculateTax = function (taxFn) {
-  let res = [];
-  for (let i = 0; i < this.length; i++) {
-    res.push(taxFn(this[i]));
-  }
-  return res;
-};
+// Array.prototype.calculateTax = function (taxFn) {
+//   let res = [];
+//   for (let i = 0; i < this.length; i++) {
+//     res.push(taxFn(this[i]));
+//   }
+//   return res;
+// };
 
-// Usage
-let newSalary1 = salary.calculateTax(calculateTenPercent);
-let newSalary2 = salary.calculateTax(calculateTwentyPercent);
+// // Usage
+// let newSalary1 = salary.calculateTax(calculateTenPercent);
+// let newSalary2 = salary.calculateTax(calculateTwentyPercent);
 
-console.log(newSalary1);
-console.log(newSalary2);
+// console.log(newSalary1);
+// console.log(newSalary2);
 
-// IIFE
-(function () {
-  console.log("This is an IIFE");
-})();
+// // IIFE
+// (function () {
+//   console.log("This is an IIFE");
+// })();
 
-(function (name) {
-  console.log(`Hello, ${name}!`);
-})("Charan");
+// (function (name) {
+//   console.log(`Hello, ${name}!`);
+// })("Charan");
+
+// Currying Function
+// function mailToSend(to, from, body) {
+//   return `Mail sent to ${to} from ${from} with body: ${body}`;
+// }
+// console.log(mailToSend("Charan", "Admin", "Hello Charan"));
+
+// function mailToSendCurried(to) {
+//   return function (from) {
+//     return function (body) {
+//       return `Mail sent to ${to} from ${from} with body: ${body}`;
+//     };
+//   };
+// }
+// console.log(mailToSendCurried("Charan")("Admin")("Hello Charan"));
+
+// // Or using arrow function
+// const mailToSendCurriedArrow = (to) => (from) => (body) =>
+//   `Mail sent to ${to} from ${from} with body: ${body}`;
+
+// Order Bookking Hierarchy using callback function and set timeout function
+
+// function loginUser(username, password, cb) {
+//   setTimeout(() => {
+//     console.log(`User ${username} logged in.`);
+//     cb(username);
+//   }, 1000);
+// }
+// function searchProduct(username, productName, cb) {
+//   setTimeout(() => {
+//     console.log(`User ${username} searched for product: ${productName}.`);
+//     cb(username, productName);
+//   }, 2000);
+// }
+// function addToCart(username, productName, cb) {
+//   setTimeout(() => {
+//     console.log(`Product ${productName} added to cart for user ${username}.`);
+//     cb(username, productName);
+//   }, 1500);
+// }
+// function checkout(username, productName, cb) {
+//   setTimeout(() => {
+//     console.log(`User ${username} checked out product: ${productName}.`);
+//     cb(username);
+//   }, 1000);
+// }
+
+// function payment(username) {
+//   setTimeout(() => {
+//     console.log(`Payment processed for user ${username}.`);
+//     console.log("Order completed successfully!");
+//   }, 2000);
+// }
+
+// function sendMail(username) {
+//   setTimeout(() => {
+//     console.log(`Order confirmation email sent to user ${username}.`);
+//   }, 1000);
+// }
+// function orderProcess(username) {
+//   return function (password) {
+//     return function (productName) {
+//       return loginUser(username, password, (username) => {
+//         return searchProduct(username, productName, (username, productName) => {
+//           return addToCart(username, productName, (username, productName) => {
+//             return checkout(username, productName, (username) => {
+//               payment(username);
+//               sendMail(username);
+//             });
+//           });
+//         });
+//       });
+//     };
+//   };
+// }
+
+// orderProcess("charan")("password123")("Laptop");
+
+
+// DOM Document Object Model
+
