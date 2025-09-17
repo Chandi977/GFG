@@ -525,6 +525,6 @@ _Last Updated: August 2025_
 
 ---
 
-<sub>Made with ❤️ by [Chandi Prasad](https://github.com/Chandi977)</sub>
+<sub>Made with ❤️ by [Chandi Charan Mahato](https://github.com/Chandi977)</sub>
 
 </div>
