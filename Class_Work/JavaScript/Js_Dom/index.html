@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        p,
+        h1 {
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        img {
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="main-title">DOM Selection Demo</h1>
+
+    <p id="unique-para">Hello from getElementById</p>
+    <p class="demo">Hello from getElementsByClassName (1)</p>
+    <p class="demo">Hello from getElementsByClassName (2)</p>
+    <p>Hello from getElementsByTagName (1)</p>
+    <p>Hello from getElementsByTagName (2)</p>
+    <p class="query">Hello from querySelector</p>
+    <p class="query">Hello from querySelectorAll (multiple)</p>
+    <div class="container">
+        <p>Child 1</p>
+        <p>Child 2</p>
+        <span>Child 3</span>
+    </div>
+    <!-- Two buttons with separate actions -->
+    <button onclick="changeElements()">Click Me to Change Elements</button>
+    <button onclick="createNewElement()">Create Element</button>
+    <button onclick="imgChange()">Change Image</button>
+    <button onclick="removeImg()">Remove Image</button>
+    <button onclick="restToDefault()">Reset Image</button>
+
+
+    <img src="https://images.pexels.com/photos/33873357/pexels-photo-33873357.jpeg" alt="img" id="imgTag">
+    <script src="script.js"></script>
+</body>
+
+</html>

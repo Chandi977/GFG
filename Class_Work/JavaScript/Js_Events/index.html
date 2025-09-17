@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Propagation Demo</title>
+    <style>
+        div {
+            padding: 20px;
+            border: 2px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grandparent">
+        Grandparent
+        <div id="parent">
+            Parent
+            <div id="child">Child</div>
+        </div>
+    </div>
+
+    <ul id="menu">
+        <li>Home</li>
+        <li>Services</li>
+        <li>Contact</li>
+    </ul>
+
+    <script>
+        const grandparent = document.getElementById("grandparent");
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        // Capturing (Trickling)
+        grandparent.addEventListener("click", () => {
+            console.log("Grandparent - Capturing");
+        }, true);
+
+        // Bubbling
+        parent.addEventListener("click", () => {
+            console.log("Parent - Bubbling");
+        });
+
+        child.addEventListener("click", () => {
+            console.log("Child - Target & Bubbling");
+        });
+
+        // Event Delegation Example
+        const menu = document.getElementById("menu");
+        menu.addEventListener("click", (e) => {
+            if (e.target.tagName === "LI") {
+                console.log("Menu clicked:", e.target.innerText);
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- 
+Perfect 👌 Let’s build a **complete guide to JavaScript Events** covering everything you asked:
+
+---
+
+# 🌟 Complete Guide to Events in JavaScript
+
+---
+
+## 🔹 1. Event Handlers
+
+Event handlers are functions that run when an event (like `click`, `mouseover`, `keydown`) happens.
+
+### Ways to attach event handlers:
+
+**(1) Inline (Not recommended)**
+
+```html
+<button onclick="alert('Clicked!')">Click Me</button>
+```
+
+**(2) DOM property**
+
+```js
+const btn = document.querySelector("button");
+btn.onclick = () => {
+  alert("Clicked using DOM property!");
+};
+```
+
+**(3) `addEventListener` (Best practice)**
+
+```js
+btn.addEventListener("click", () => {
+  alert("Clicked using addEventListener!");
+});
+```
+
+✅ `addEventListener` is preferred because you can attach multiple handlers and choose between capturing or bubbling.
+
+---
+
+## 🔹 2. Event Propagation
+
+Propagation = how an event travels through the DOM tree.
+
+Phases:
+
+1. **Capturing (Trickling)** → From document **top → target**.
+2. **Target Phase** → Event hits the **element clicked**.
+3. **Bubbling** → From target **back up → document**.
+
+---
+
+## 🔹 3. Capturing (Trickling)
+
+Capturing = "event trickles down" the DOM tree.
+
+Syntax:
+
+```js
+element.addEventListener("click", handler, true); // true = capture phase
+```
+
+---
+
+## 🔹 4. Bubbling
+
+Bubbling = "event bubbles up" after reaching the target.
+
+Syntax (default):
+
+```js
+element.addEventListener("click", handler); // false by default
+```
+
+---
+
+## 🔹 5. Target Phase
+
+The **target** is the element where the event actually occurred.
+
+```js
+element.addEventListener("click", (event) => {
+  console.log("Clicked element:", event.target); 
+});
+```
+
+---
+
+## 🔹 6. Event Delegation
+
+👉 Instead of attaching event listeners to multiple child elements, attach **one listener to a parent** and let bubbling handle it.
+
+### Example: Click on list items
+
+```html
+<ul id="menu">
+  <li>Home</li>
+  <li>About</li>
+  <li>Contact</li>
+</ul>
+
+<script>
+  const menu = document.getElementById("menu");
+
+  menu.addEventListener("click", (event) => {
+    if (event.target.tagName === "LI") {
+      alert("You clicked: " + event.target.innerText);
+    }
+  });
+</script>
+```
+
+✅ Real-life example: A shopping cart app → instead of adding a `click` listener to every "Add to Cart" button, attach **one listener to the parent container**.
+
+---
+
+## 🔹 7. Stopping Propagation
+
+Sometimes you don’t want the event to continue bubbling.
+
+```js
+child.addEventListener("click", (event) => {
+  event.stopPropagation();
+  console.log("Only Child clicked, no bubbling!");
+});
+```
+
+---
+
+## 🔹 8. Real-Life Example (Restaurant Analogy 🍽️)
+
+* **Capturing (Trickling)** → Waiter walks **from entrance → your table** (checking each table).
+* **Target** → Waiter reaches **your table**.
+* **Bubbling** → Waiter walks **back to the entrance**, informing staff along the way.
+* **Delegation** → Instead of assigning **one waiter per table**, the **head waiter** listens to all and assigns tasks.
+
+---
+
+## 🔹 9. Full Demo Code
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Propagation Demo</title>
+  <style>
+    div { padding: 20px; border: 2px solid black; margin: 10px; }
+  </style>
+</head>
+<body>
+  <div id="grandparent">
+    Grandparent
+    <div id="parent">
+      Parent
+      <div id="child">Child</div>
+    </div>
+  </div>
+
+  <ul id="menu">
+    <li>Home</li>
+    <li>Services</li>
+    <li>Contact</li>
+  </ul>
+
+  <script>
+    const grandparent = document.getElementById("grandparent");
+    const parent = document.getElementById("parent");
+    const child = document.getElementById("child");
+
+    // Capturing (Trickling)
+    grandparent.addEventListener("click", () => {
+      console.log("Grandparent - Capturing");
+    }, true);
+
+    // Bubbling
+    parent.addEventListener("click", () => {
+      console.log("Parent - Bubbling");
+    });
+
+    child.addEventListener("click", () => {
+      console.log("Child - Target & Bubbling");
+    });
+
+    // Event Delegation Example
+    const menu = document.getElementById("menu");
+    menu.addEventListener("click", (e) => {
+      if (e.target.tagName === "LI") {
+        console.log("Menu clicked:", e.target.innerText);
+      }
+    });
+  </script>
+</body>
+</html>
+```
+
+---
+
+# ✅ Quick Recap
+
+* **Event Handlers** → Functions triggered on events.
+* **Capturing (Trickling)** → Top → Down.
+* **Target** → Actual element clicked.
+* **Bubbling** → Down → Top.
+* **Delegation** → Handle multiple children with one parent listener.
+* **stopPropagation()** → Prevents further propagation.
+
+---
+
+Do you want me to also make a **visual diagram (arrows showing capturing vs bubbling flow)** so it’s easier to memorize?
+
+-->

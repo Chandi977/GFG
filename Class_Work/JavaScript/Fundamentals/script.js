@@ -440,6 +440,66 @@
 
 // orderProcess("charan")("password123")("Laptop");
 
-
 // DOM Document Object Model
+
+// Select element
+// const heading = document.getElementById("title");
+
+// Change content
+// heading.textContent = "Hello, DOM!";
+
+// Change style
+// heading.style.color = "blue";
+
+// Alert popup
+// window.alert("Hello from BOM!");
+
+// Redirect to another page
+// window.location.href = "https://www.google.com";
+
+// Check browser info
+// console.log(navigator.userAgent);
+
+// Vanila Js
+// function updateClock() {
+//   const now = new Date();
+//   document.getElementById("clock").textContent =
+//     "⏰ " + now.toLocaleTimeString();
+// }
+// setInterval(updateClock, 1000);
+// updateClock();
+
+// // BOM Example: Browser Info
+// document.getElementById("browserInfo").textContent = navigator.userAgent;
+
+// // --- DOM Example: To-Do List ---
+// const taskInput = document.getElementById("taskInput");
+// const addTaskBtn = document.getElementById("addTaskBtn");
+// const taskList = document.getElementById("tasks");
+
+// addTaskBtn.addEventListener("click", addTask);
+// taskInput.addEventListener("keypress", (e) => {
+//   if (e.key === "Enter") addTask();
+// });
+
+// function addTask() {
+//   const taskText = taskInput.value.trim();
+//   if (taskText === "") return;
+
+//   const li = document.createElement("li");
+//   li.textContent = taskText;
+
+//   // Mark as complete
+//   li.addEventListener("click", () => {
+//     li.classList.toggle("completed");
+//   });
+
+//   // Delete on double-click
+//   li.addEventListener("dblclick", () => {
+//     li.remove();
+//   });
+
+//   taskList.appendChild(li);
+//   taskInput.value = "";
+// }
 
