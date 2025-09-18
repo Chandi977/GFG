@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Events Demo</title>
+</head>
+
+<body>
+    <h1>JS Events Demo (Check Console)</h1>
+
+    <!-- Mouse Events -->
+    <button id="mouseBtn">Mouse Events</button><br><br>
+
+    <!-- Keyboard Events -->
+    <input id="keyboardInput" placeholder="Type something..."><br><br>
+
+    <!-- Form Events -->
+    <form id="formDemo">
+        <input type="text" id="username" placeholder="Enter name">
+        <button type="submit">Submit</button>
+    </form><br>
+
+    <!-- Window/Document Events -->
+    <div style="height: 200px; overflow: auto; border: 1px solid black;" id="scrollBox">
+        <p style="height: 500px;">Scroll inside me</p>
+    </div><br>
+
+    <!-- Clipboard Events -->
+    <input type="text" id="clipInput" value="Copy or paste me"><br><br>
+
+    <!-- Drag & Drop -->
+    <div id="dragTarget" draggable="true" style="width:100px;height:50px;background:lightblue;">Drag me</div>
+    <div id="dropArea" style="width:150px;height:80px;border:2px dashed gray;margin-top:10px;">Drop here</div><br>
+
+    <!-- Media Events -->
+    <video id="videoDemo" width="250" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video><br><br>
+
+    <script>
+        // ----------------- Mouse Events -----------------
+        const mouseBtn = document.getElementById("mouseBtn");
+        mouseBtn.addEventListener("click", () => console.log("Mouse clicked"));
+        mouseBtn.addEventListener("dblclick", () => console.log("Mouse double-clicked"));
+        mouseBtn.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+            console.log("Right-click detected");
+        });
+        mouseBtn.addEventListener("mouseover", () => console.log("Mouse over button"));
+        mouseBtn.addEventListener("mouseout", () => console.log("Mouse left button"));
+
+        // ----------------- Keyboard Events -----------------
+        const input = document.getElementById("keyboardInput");
+        input.addEventListener("keydown", (e) => console.log("Key down:", e.key));
+        input.addEventListener("keyup", (e) => console.log("Key up:", e.key));
+
+        // ----------------- Form Events -----------------
+        const form = document.getElementById("formDemo");
+        const username = document.getElementById("username");
+
+        username.addEventListener("focus", () => console.log("Input focused"));
+        username.addEventListener("blur", () => console.log("Input blurred"));
+        username.addEventListener("input", () => console.log("Input value:", username.value));
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            console.log("Form submitted with value:", username.value);
+        });
+
+        // ----------------- Window/Document Events -----------------
+        window.addEventListener("resize", () => console.log("Window resized"));
+        window.addEventListener("scroll", () => console.log("Window scrolled"));
+        document.addEventListener("DOMContentLoaded", () => console.log("DOM fully loaded"));
+
+        const scrollBox = document.getElementById("scrollBox");
+        scrollBox.addEventListener("scroll", () => console.log("Scrolled inside box"));
+
+        // ----------------- Clipboard Events -----------------
+        const clipInput = document.getElementById("clipInput");
+        clipInput.addEventListener("copy", () => console.log("Copied text"));
+        clipInput.addEventListener("cut", () => console.log("Cut text"));
+        clipInput.addEventListener("paste", () => console.log("Pasted text"));
+
+        // ----------------- Drag & Drop Events -----------------
+        const dragTarget = document.getElementById("dragTarget");
+        const dropArea = document.getElementById("dropArea");
+
+        dragTarget.addEventListener("dragstart", () => console.log("Drag started"));
+        dragTarget.addEventListener("dragend", () => console.log("Drag ended"));
+
+        dropArea.addEventListener("dragover", (e) => e.preventDefault());
+        dropArea.addEventListener("drop", (e) => {
+            e.preventDefault();
+            console.log("Dropped on drop area");
+        });
+
+        // ----------------- Media Events -----------------
+        const video = document.getElementById("videoDemo");
+        video.addEventListener("play", () => console.log("Video playing"));
+        video.addEventListener("pause", () => console.log("Video paused"));
+        video.addEventListener("ended", () => console.log("Video ended"));
+        video.addEventListener("volumechange", () => console.log("Volume changed"));
+
+        // ----------------- Touch Events (Mobile only) -----------------
+        document.addEventListener("touchstart", () => console.log("Touch started"));
+        document.addEventListener("touchend", () => console.log("Touch ended"));
+
+        // ----------------- Other Useful Events -----------------
+        window.addEventListener("online", () => console.log("You are online"));
+        window.addEventListener("offline", () => console.log("You are offline"));
+    </script>
+</body>
+
+</html>

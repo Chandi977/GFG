@@ -39,8 +39,6 @@ const renderTasks = () => {
       renderTasks();
     });
 
-    // Action buttons
-    // Action buttons
     const btnGroup = document.createElement("div");
 
     const markBtn = document.createElement("button");

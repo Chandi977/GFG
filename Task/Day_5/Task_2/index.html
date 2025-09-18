@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .canvas {
+            position: relative;
+            flex: 1;
+            width: 100%;
+            border: 2px dashed gray;
+            height: 90vh;
+        }
+
+        .circle-shape {
+            width: 50px;
+            height: 50px;
+            background-color: crimson;
+            border-radius: 50%;
+            position: absolute;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Random Circle generator</h2>
+        <div class="canvas"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

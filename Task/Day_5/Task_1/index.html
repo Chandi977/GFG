@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            min-height: 90vh;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .fields {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f5f7fa;
+            border-radius: 12px;
+        }
+
+        select,
+        input,
+        button {
+            padding: 10px 14px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        select:focus,
+        input:focus {
+            border-color: #6c63ff;
+            box-shadow: 0 0 5px rgba(108, 99, 255, 0.4);
+        }
+
+        button {
+            background: #6c63ff;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #5549d5;
+            transform: scale(1.05);
+        }
+
+        .canvas {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            border: 2px dashed #bbb;
+            border-radius: 12px;
+            padding: 20px;
+            background: #fafafa;
+            min-height: 400px;
+            transition: 0.3s;
+        }
+
+        .canvas:hover {
+            border-color: #6c63ff;
+        }
+
+        .shape {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .shape:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .square {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .rectangle {
+            width: 120px;
+            height: 60px;
+            border-radius: 5px;
+        }
+
+        .oval {
+            width: 120px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 80px solid red;
+            background: none !important;
+        }
+
+        .star {
+            width: 100px;
+            height: 100px;
+            background: gold;
+            clip-path: polygon(50% 0%,
+                    61% 35%,
+                    98% 35%,
+                    68% 57%,
+                    79% 91%,
+                    50% 70%,
+                    21% 91%,
+                    32% 57%,
+                    2% 35%,
+                    39% 35%);
+        }
+
+        .hexagon {
+            width: 100px;
+            height: 55px;
+            background-color: teal;
+            position: relative;
+        }
+
+        .hexagon::before,
+        .hexagon::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+        }
+
+        .hexagon::before {
+            bottom: 100%;
+            border-bottom: 30px solid teal;
+        }
+
+        .hexagon::after {
+            top: 100%;
+            border-top: 30px solid teal;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🎨 Shape Generator</h1>
+        <div class="fields">
+            <select id="shapeName" class="shapeName">
+                <option value="square">Square</option>
+                <option value="circle">Circle</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="oval">Oval</option>
+                <option value="triangle">Triangle</option>
+                <option value="star">Star</option>
+                <option value="hexagon">Hexagon</option>
+            </select>
+            <input type="text" class="colorName" placeholder="Enter color (e.g. red, blue, #123456)">
+            <input type="number" class="qtn" placeholder="Quantity" min="1" max="20">
+            <button id="btn">Generate</button>
+        </div>
+
+        <div class="canvas"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
