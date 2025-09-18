@@ -1,0 +1,131 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #24292f;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.user-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.user-card.hidden {
+    display: none;
+}
+
+.card-header {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.user-info h2 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.user-info p {
+    margin: 5px 0 0 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.card-details p {
+    margin: 4px 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.card-stats div {
+    text-align: center;
+    font-size: 0.95em;
+}
+
+.card-stats strong {
+    display: block;
+    font-size: 1.1em;
+    color: #24292f;
+}
+
+.card-repos h3 {
+    margin: 15px 0 10px 0;
+}
+
+.card-repos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-repos li {
+    margin-bottom: 6px;
+}
+
+.card-repos a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.card-repos a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}

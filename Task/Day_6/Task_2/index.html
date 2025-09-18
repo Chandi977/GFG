@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>GitHub Profile Viewer</h1>
+        <div class="search-box">
+            <input type="text" id="username" placeholder="Enter GitHub username">
+            <button id="fetchBtn">Fetch User</button>
+        </div>
+
+        <div id="userCard" class="user-card hidden">
+            <div class="card-header">
+                <img id="avatar" src="" alt="User Avatar">
+                <div class="user-info">
+                    <h2 id="name"></h2>
+                    <p id="bio"></p>
+                </div>
+            </div>
+
+            <div class="card-details">
+                <p id="fullName"></p>
+                <p id="location"></p>
+                <p id="company"></p>
+                <p id="email"></p>
+                <p id="blog"></p>
+                <p id="created"></p>
+            </div>
+
+            <div class="card-stats">
+                <div><strong id="repos"></strong></div>
+                <div><strong id="followers"></strong></div>
+                <div><strong id="following"></strong></div>
+            </div>
+
+            <div class="card-repos">
+                <h3>Latest Repositories</h3>
+                <ul id="repoList"></ul>
+            </div>
+        </div>
+
+        <p id="error" class="error"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
