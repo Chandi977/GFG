@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce vs Throttle</title>
+</head>
+
+<body style="height:2000px; padding:20px;">
+    <h1>Scroll down to test Debounce vs Throttle</h1>
+    <p>Open Console (F12) to see logs.</p>
+
+    <script>
+        /*
+        🔹 Throttle
+        👉 Ensures a function runs at most once in a given time interval.
+        Useful for continuous events (scroll, resize, mousemove).
+        */
+        function throttle(fn, limit) {
+            let lastCall = 0;
+            return function (...args) {
+                const now = Date.now();
+                if (now - lastCall >= limit) {
+                    lastCall = now;
+                    fn.apply(this, args);
+                }
+            };
+        }
+
+        /*
+        🔹 Debounce
+        👉 Ensures a function runs only after a specified delay
+           since the last time it was invoked.
+        Useful for input validation, search boxes, resize, etc.
+        */
+        function debounce(fn, delay) {
+            let timer;
+            return function (...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => fn.apply(this, args), delay);
+            };
+        }
+
+        // Test Functions 
+        const logThrottle = () =>
+            console.log("🔥 Throttle Scroll:", window.scrollY, Date.now());
+
+        const logDebounce = () =>
+            console.log("⚡ Debounce Scroll:", window.scrollY, Date.now());
+
+        // Create versions
+        const throttledScroll = throttle(logThrottle, 200); // once per 200ms
+        const debouncedScroll = debounce(logDebounce, 200); // after user stops scrolling for 200ms
+
+        // Attach listeners
+        window.addEventListener("scroll", throttledScroll);
+        window.addEventListener("scroll", debouncedScroll);
+    </script>
+</body>
+
+</html>
