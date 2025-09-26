@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "price": 2999,
+    "inStock": true,
+    "image": "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch",
+    "price": 4999,
+    "inStock": false,
+    "image": "https://images.pexels.com/photos/267391/pexels-photo-267391.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Bluetooth Speaker",
+    "price": 1999,
+    "inStock": true,
+    "image": "https://images.pexels.com/photos/1706694/pexels-photo-1706694.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Gaming Mouse",
+    "price": 1299,
+    "inStock": true,
+    "image": "https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Mechanical Keyboard",
+    "price": 3499,
+    "inStock": false,
+    "image": "https://images.pexels.com/photos/18311093/pexels-photo-18311093.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Laptop Stand",
+    "price": 899,
+    "inStock": true,
+    "image": "https://images.pexels.com/photos/7530015/pexels-photo-7530015.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "External Hard Drive",
+    "price": 5999,
+    "inStock": true,
+    "image": "https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Tripod",
+    "price": 1499,
+    "inStock": false,
+    "image": "https://images.pexels.com/photos/1797089/pexels-photo-1797089.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Portable Power Bank",
+    "price": 2499,
+    "inStock": true,
+    "image": "https://images.pexels.com/photos/4072683/pexels-photo-4072683.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "Camera",
+    "price": 8999,
+    "inStock": true,
+    "image": "https://images.pexels.com/photos/1203803/pexels-photo-1203803.jpeg"
+  }
+]
