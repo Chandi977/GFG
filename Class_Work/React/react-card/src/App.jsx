@@ -8,7 +8,7 @@ export const DataContext = createContext();
 const App = () => {
   const data = {
     title: "Hello from App.jsx",
-    description: "This data goes directly to Card3 🚀",
+    description: "This data goes directly to Card3",
   };
   return (
     <DataContext.Provider value={data}>

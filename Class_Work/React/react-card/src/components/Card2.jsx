@@ -5,7 +5,7 @@ const Card2 = () => {
   const { title, description } = useContext(DataContext);
 
   return (
-    <div className="p-4 bg-gray-400 rounded">
+    <div>
       <h2>{title}</h2>
       <p>{description}</p>
     </div>
